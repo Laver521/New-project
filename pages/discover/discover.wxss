@@ -1,0 +1,146 @@
+.hero {
+  display: flex;
+  gap: 20rpx;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 34rpx 28rpx;
+  border-radius: 8rpx;
+  color: #ffffff;
+  background: linear-gradient(135deg, #17231f, #0f766e 62%, #f5b544);
+}
+
+.hero .subtitle {
+  margin-top: 12rpx;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.kicker {
+  margin-bottom: 12rpx;
+  font-size: 22rpx;
+  font-weight: 800;
+  opacity: 0.72;
+}
+
+.post-button {
+  width: 150rpx;
+  min-width: 150rpx;
+}
+
+.search {
+  padding: 20rpx;
+}
+
+.filter-row {
+  display: flex;
+  gap: 12rpx;
+  margin-top: 18rpx;
+}
+
+.filter {
+  min-width: 96rpx;
+  padding: 12rpx 16rpx;
+  border: 1rpx solid #d7dbcf;
+  border-radius: 8rpx;
+  text-align: center;
+  color: #667085;
+  font-size: 24rpx;
+}
+
+.filter.active {
+  border-color: #0f766e;
+  background: #e7f5f2;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18rpx;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22rpx;
+}
+
+.trade-card {
+  overflow: hidden;
+  border: 1rpx solid #e5e7dc;
+  border-radius: 8rpx;
+  background: #ffffff;
+  box-shadow: 0 8rpx 28rpx rgba(23, 35, 31, 0.07);
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 330rpx;
+  background: #d7dbcf;
+}
+
+.card-body {
+  padding: 24rpx;
+}
+
+.topline,
+.bottomline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pill {
+  padding: 8rpx 14rpx;
+  border-radius: 8rpx;
+  background: #e7f5f2;
+  color: #0f766e;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+.heat {
+  color: #92400e;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+.card-title {
+  margin-top: 16rpx;
+  font-size: 36rpx;
+  font-weight: 800;
+}
+
+.meta {
+  margin: 10rpx 0 18rpx;
+  color: #34423c;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+
+.price {
+  color: #0f766e;
+  font-size: 34rpx;
+  font-weight: 800;
+}
+
+.want-item {
+  display: flex;
+  min-height: 78rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rpx solid #eef0e8;
+  font-size: 26rpx;
+}
+
+.want-item:first-of-type {
+  border-top: 0;
+}
+
+.mini {
+  width: 110rpx;
+  min-width: 110rpx;
+  font-size: 24rpx;
+}

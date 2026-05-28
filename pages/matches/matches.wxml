@@ -1,0 +1,42 @@
+<view class="page">
+  <view class="section">
+    <view class="title">卡友交流</view>
+    <view class="subtitle">换卡邀约、真假讨论、行情观察和线下活动都在这里。</view>
+  </view>
+
+  <view class="panel section">
+    <view class="stat-row">
+      <view class="stat">
+        <view class="stat-value">128</view>
+        <view class="subtitle">今日发帖</view>
+      </view>
+      <view class="stat">
+        <view class="stat-value">36</view>
+        <view class="subtitle">同城交易</view>
+      </view>
+      <view class="stat">
+        <view class="stat-value">9</view>
+        <view class="subtitle">鉴定求助</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="topic-tabs section">
+    <view class="topic {{activeType === item ? 'active' : ''}}" wx:for="{{types}}" wx:key="*this" bindtap="setType" data-type="{{item}}">{{item}}</view>
+  </view>
+
+  <view class="post panel section" wx:for="{{filteredPosts}}" wx:key="id" bindtap="openPost" data-id="{{item.id}}">
+    <view class="post-top">
+      <view class="pill">{{item.type}}</view>
+      <view class="subtitle">{{item.updatedAt}}</view>
+    </view>
+    <view class="name post-title">{{item.title}}</view>
+    <view class="subtitle">{{item.body}}</view>
+    <view class="post-foot">
+      <view class="subtitle">by {{item.author}}</view>
+      <view class="reply">{{item.replies}} 回复</view>
+    </view>
+  </view>
+
+  <button class="primary floating" bindtap="goPost">发布交流</button>
+</view>

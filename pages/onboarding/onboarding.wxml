@@ -1,0 +1,41 @@
+<view class="page">
+  <view class="section">
+    <view class="title">发布一张卡或一个话题</view>
+    <view class="subtitle">填写关键信息后，可以作为换卡、出售、求卡或经验讨论发布到社区。</view>
+  </view>
+
+  <view class="panel">
+    <label class="label">发布类型</label>
+    <picker mode="selector" range="{{typeOptions}}" bindchange="onTypeChange">
+      <view>{{form.type}}</view>
+    </picker>
+
+    <label class="label">标题</label>
+    <input value="{{form.title}}" data-field="title" bindinput="onInput" placeholder="例如：出一张梅西 Topps Chrome 签字" />
+
+    <label class="label">球员 / 卡片</label>
+    <input value="{{form.player}}" data-field="player" bindinput="onInput" placeholder="球员、年份、品牌、限编" />
+
+    <label class="label">期望价格或交换目标</label>
+    <input value="{{form.target}}" data-field="target" bindinput="onInput" placeholder="例如：¥3200 或换同级库里" />
+
+    <label class="label">详细说明</label>
+    <textarea value="{{form.body}}" data-field="body" bindinput="onInput" maxlength="220" placeholder="描述品相、评级、城市、面交/邮寄偏好" />
+
+    <view class="upload-box" bindtap="chooseImage">
+      <image wx:if="{{form.image}}" class="preview" src="{{form.image}}" mode="aspectFill" />
+      <view wx:else>
+        <view class="upload-icon">+</view>
+        <view class="subtitle">添加卡片照片</view>
+      </view>
+    </view>
+
+    <button class="primary" bindtap="submit">发布到交流区</button>
+  </view>
+
+  <view class="panel section" wx:if="{{submitted}}">
+    <view class="name">已生成预览</view>
+    <view class="subtitle">{{submitted.title}}</view>
+    <view class="subtitle">{{submitted.type}} · {{submitted.target}}</view>
+  </view>
+</view>

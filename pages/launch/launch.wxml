@@ -1,0 +1,8 @@
+<view class="page launch">
+  <view class="brand-card">
+    <view class="kicker">CARD EXCHANGE</view>
+    <view class="title">球星卡集市</view>
+    <view class="subtitle">找卡、晒卡、约换卡，和同好把收藏流动起来。</view>
+    <button class="primary" bindtap="enter">进入卡市</button>
+  </view>
+</view>

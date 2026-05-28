@@ -1,0 +1,73 @@
+.profile-card {
+  display: flex;
+  gap: 22rpx;
+  align-items: center;
+  padding: 34rpx 28rpx;
+  border-radius: 8rpx;
+  background: #17231f;
+  color: #ffffff;
+}
+
+.profile-card .subtitle {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.avatar {
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  background: #f5b544;
+  color: #17231f;
+  text-align: center;
+  line-height: 108rpx;
+  font-size: 44rpx;
+  font-weight: 800;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18rpx;
+}
+
+.mini {
+  width: 116rpx;
+  min-width: 116rpx;
+}
+
+.list-item {
+  padding: 20rpx 0;
+  border-top: 1rpx solid #eef0e8;
+  color: #34423c;
+  font-size: 26rpx;
+}
+
+.list-item:first-of-type {
+  border-top: 0;
+}
+
+.my-card {
+  display: flex;
+  gap: 18rpx;
+  margin-bottom: 18rpx;
+  padding: 18rpx;
+}
+
+.thumb {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 8rpx;
+  background: #d7dbcf;
+}
+
+.my-card-body {
+  flex: 1;
+}
+
+.price {
+  margin-top: 16rpx;
+  color: #0f766e;
+  font-size: 30rpx;
+  font-weight: 800;
+}

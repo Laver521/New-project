@@ -1,0 +1,27 @@
+.launch {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.brand-card {
+  width: 100%;
+  padding: 56rpx 36rpx;
+  border-radius: 8rpx;
+  background: linear-gradient(135deg, #10231f, #0f766e 58%, #f5b544);
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.brand-card .subtitle {
+  margin: 18rpx 0 36rpx;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.kicker {
+  margin-bottom: 16rpx;
+  font-size: 22rpx;
+  font-weight: 800;
+  letter-spacing: 0;
+  opacity: 0.78;
+}

@@ -1,0 +1,61 @@
+.topic-tabs {
+  display: flex;
+  gap: 12rpx;
+}
+
+.topic {
+  flex: 1;
+  padding: 16rpx 8rpx;
+  border: 1rpx solid #d7dbcf;
+  border-radius: 8rpx;
+  background: #ffffff;
+  text-align: center;
+  color: #667085;
+  font-size: 24rpx;
+}
+
+.topic.active {
+  border-color: #0f766e;
+  background: #e7f5f2;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.post {
+  padding: 24rpx;
+}
+
+.post-top,
+.post-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-title {
+  margin: 18rpx 0 12rpx;
+  line-height: 1.35;
+}
+
+.pill {
+  padding: 8rpx 14rpx;
+  border-radius: 8rpx;
+  background: #fff4d6;
+  color: #92400e;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+.reply {
+  color: #0f766e;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.floating {
+  position: fixed;
+  right: 24rpx;
+  bottom: 44rpx;
+  width: 190rpx;
+  box-shadow: 0 12rpx 30rpx rgba(15, 118, 110, 0.22);
+}

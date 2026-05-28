@@ -1,0 +1,47 @@
+<view class="page chat-page">
+  <view wx:if="{{card}}" class="card-detail section">
+    <image class="hero-image" src="{{card.image}}" mode="aspectFill" />
+    <view class="panel detail-panel">
+      <view class="detail-head">
+        <view>
+          <view class="title">{{card.player}}</view>
+          <view class="subtitle">{{card.year}} · {{card.brand}} · {{card.team}}</view>
+        </view>
+        <view class="price">{{card.price}}</view>
+      </view>
+      <view class="meta-grid">
+        <view class="stat">
+          <view class="stat-value">{{card.rarity}}</view>
+          <view class="subtitle">稀有度</view>
+        </view>
+        <view class="stat">
+          <view class="stat-value">{{card.grade}}</view>
+          <view class="subtitle">评级</view>
+        </view>
+      </view>
+      <view class="owner">
+        <view class="name">{{card.owner}}</view>
+        <view class="subtitle">{{card.city}} · {{card.action}} · 热度 {{card.heat}}</view>
+      </view>
+      <view>
+        <text class="tag" wx:for="{{card.tags}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else class="panel section">
+    <view class="title">交流详情</view>
+    <view class="subtitle">这是一条社区讨论的模拟对话，你可以继续输入消息体验交流流程。</view>
+  </view>
+
+  <scroll-view class="messages panel" scroll-y>
+    <view wx:for="{{messages}}" wx:key="id" class="message {{item.mine ? 'mine' : ''}}">
+      <view class="bubble">{{item.content}}</view>
+    </view>
+  </scroll-view>
+
+  <view class="composer">
+    <input value="{{draft}}" bindinput="onDraft" placeholder="询问品相、价格或交换方案" />
+    <button class="primary send" bindtap="send">发送</button>
+  </view>
+</view>

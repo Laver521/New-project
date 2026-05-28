@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/launch/launch",
+    "pages/onboarding/onboarding",
+    "pages/discover/discover",
+    "pages/matches/matches",
+    "pages/chat/chat",
+    "pages/membership/membership",
+    "pages/admin/admin"
+  ],
+  "window": {
+    "navigationBarTitleText": "球星卡集市",
+    "navigationBarBackgroundColor": "#F6F7F2",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F6F7F2"
+  },
+  "tabBar": {
+    "color": "#667085",
+    "selectedColor": "#0F766E",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "卡市"
+      },
+      {
+        "pagePath": "pages/matches/matches",
+        "text": "交流"
+      },
+      {
+        "pagePath": "pages/membership/membership",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

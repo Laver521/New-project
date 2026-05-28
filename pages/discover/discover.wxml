@@ -1,0 +1,56 @@
+<view class="page">
+  <view class="hero section">
+    <view>
+      <view class="kicker">今日卡市</view>
+      <view class="title">热门球星卡正在流动</view>
+      <view class="subtitle">浏览可换、可售、求同级换的卡片，找到感兴趣的藏家直接开聊。</view>
+    </view>
+    <button class="primary post-button" bindtap="goPost">发布</button>
+  </view>
+
+  <view class="search panel section">
+    <input value="{{keyword}}" bindinput="onSearch" placeholder="搜索球员、品牌、球队" />
+    <view class="filter-row">
+      <view class="filter {{activeSport === item ? 'active' : ''}}" wx:for="{{sports}}" wx:key="*this" bindtap="setSport" data-sport="{{item}}">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-head">
+      <view class="name">精选卡片</view>
+      <view class="subtitle">{{filteredCards.length}} 张</view>
+    </view>
+    <view class="card-list">
+      <view class="trade-card" wx:for="{{filteredCards}}" wx:key="id" bindtap="openCard" data-id="{{item.id}}">
+        <image class="card-image" src="{{item.image}}" mode="aspectFill" />
+        <view class="card-body">
+          <view class="topline">
+            <view class="pill">{{item.action}}</view>
+            <view class="heat">热度 {{item.heat}}</view>
+          </view>
+          <view class="card-title">{{item.player}}</view>
+          <view class="subtitle">{{item.year}} · {{item.brand}}</view>
+          <view class="meta">{{item.rarity}} · {{item.grade}}</view>
+          <view class="bottomline">
+            <view class="price">{{item.price}}</view>
+            <view class="subtitle">{{item.city}}</view>
+          </view>
+          <view>
+            <text class="tag" wx:for="{{item.tags}}" wx:key="*this">{{item}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel section">
+    <view class="section-head">
+      <view class="name">全站求卡</view>
+      <view class="subtitle">藏家正在找</view>
+    </view>
+    <view class="want-item" wx:for="{{wants}}" wx:key="*this">
+      <view>{{item}}</view>
+      <button class="ghost mini" bindtap="goPost">我有</button>
+    </view>
+  </view>
+</view>

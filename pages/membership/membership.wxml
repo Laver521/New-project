@@ -1,0 +1,49 @@
+<view class="page">
+  <view class="profile-card section">
+    <view class="avatar">{{initial}}</view>
+    <view>
+      <view class="title">{{profile.nickname}}</view>
+      <view class="subtitle">{{profile.city}} · {{profile.level}} · 评分 {{profile.rating}}</view>
+    </view>
+  </view>
+
+  <view class="panel section">
+    <view class="stat-row">
+      <view class="stat">
+        <view class="stat-value">{{profile.trades}}</view>
+        <view class="subtitle">完成交易</view>
+      </view>
+      <view class="stat">
+        <view class="stat-value">{{profile.inventory}}</view>
+        <view class="subtitle">库存卡片</view>
+      </view>
+      <view class="stat">
+        <view class="stat-value">{{profile.following}}</view>
+        <view class="subtitle">关注藏家</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel section">
+    <view class="section-head">
+      <view class="name">我的求卡清单</view>
+      <button class="ghost mini" bindtap="goPost">新增</button>
+    </view>
+    <view class="list-item" wx:for="{{watchlist}}" wx:key="*this">{{item}}</view>
+  </view>
+
+  <view class="section">
+    <view class="section-head">
+      <view class="name">我的展示卡</view>
+      <view class="subtitle">可换/可售</view>
+    </view>
+    <view class="my-card panel" wx:for="{{cards}}" wx:key="id" bindtap="openCard" data-id="{{item.id}}">
+      <image class="thumb" src="{{item.image}}" mode="aspectFill" />
+      <view class="my-card-body">
+        <view class="name">{{item.player}}</view>
+        <view class="subtitle">{{item.brand}} · {{item.grade}}</view>
+        <view class="price">{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>

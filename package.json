@@ -1,0 +1,10 @@
+{
+  "name": "sports-card-exchange-miniapp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sports card exchange community mini program prototype.",
+  "scripts": {
+    "test": "node tests/businessRules.test.js"
+  },
+  "devDependencies": {}
+}

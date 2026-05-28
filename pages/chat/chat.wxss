@@ -1,0 +1,93 @@
+.chat-page {
+  padding-bottom: 130rpx;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: 420rpx;
+  border-radius: 8rpx;
+  background: #d7dbcf;
+}
+
+.detail-panel {
+  margin-top: -36rpx;
+  position: relative;
+}
+
+.detail-head {
+  display: flex;
+  gap: 20rpx;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.price {
+  min-width: 150rpx;
+  color: #0f766e;
+  text-align: right;
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.meta-grid {
+  display: flex;
+  gap: 16rpx;
+  margin: 22rpx 0;
+}
+
+.owner {
+  margin: 20rpx 0 8rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #eef0e8;
+}
+
+.messages {
+  height: 420rpx;
+  box-sizing: border-box;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 18rpx;
+}
+
+.message.mine {
+  justify-content: flex-end;
+}
+
+.bubble {
+  max-width: 78%;
+  padding: 18rpx 22rpx;
+  border-radius: 8rpx;
+  background: #eef0e8;
+  color: #17231f;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.mine .bubble {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.composer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 14rpx;
+  padding: 18rpx 24rpx 28rpx;
+  border-top: 1rpx solid #e5e7dc;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.composer input {
+  flex: 1;
+}
+
+.send {
+  width: 132rpx;
+}
